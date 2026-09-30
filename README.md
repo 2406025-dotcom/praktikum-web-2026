@@ -28,3 +28,6 @@
 - Memory: 16384MB RAM
 - Page file: 11916MB used, 9073MB available
 - diretX Version: DirectX 12
+- Npm: 11.12.1
+- Node Js Version: v24.15.0
+- git version: 2.54.0.windows.1
