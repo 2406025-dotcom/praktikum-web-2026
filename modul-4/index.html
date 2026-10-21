@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Portofolio Proyek</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Portofolio Proyek</h1>
+        <p class="subtitle">Modul 4: Pengolahan Logika Data & Interaktivitas DOM</p>
+      </header>
+
+      <!-- Statistik -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Proyek</h3>
+          <p id="stat-total-projects">0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Total Anggaran</h3>
+          <p id="stat-total-budget">Rp 0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Proyek Selesai</h3>
+          <p id="stat-completed-projects">0</p>
+        </div>
+      </section>
+
+      <!-- Form Tambah Proyek -->
+      <section class="form-section">
+        <h2>Tambah Proyek Baru</h2>
+
+        <form id="project-form">
+          <label for="project-title">Judul Proyek</label>
+          <input type="text" id="project-title" placeholder="Masukkan judul proyek" required />
+
+          <label for="project-category">Kategori</label>
+          <select id="project-category" required>
+            <option value="Web App">Web App</option>
+            <option value="Mobile App">Mobile App</option>
+            <option value="Desktop App">Desktop App</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+          </select>
+
+          <label for="project-budget">Estimasi Anggaran (Rp)</label>
+          <input type="number" id="project-budget" placeholder="Contoh: 2500000" min="1" step="any" required />
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="project-completed" />
+            Sudah Selesai
+          </label>
+
+          <button type="submit" class="btn-submit">Tambah Proyek</button>
+        </form>
+
+        <p id="form-message" role="status"></p>
+      </section>
+
+      <!-- Pencarian -->
+      <section class="search-section">
+        <h2>Daftar Proyek</h2>
+        <input type="search" id="search-input" placeholder="Cari nama proyek..." aria-label="Cari nama proyek" />
+      </section>
+
+      <!-- Filter Kategori -->
+      <div class="filter-group">
+        <button type="button" class="btn-filter active" data-category="Semua">Semua Proyek</button>
+        <button type="button" class="btn-filter" data-category="Web App">Web App</button>
+        <button type="button" class="btn-filter" data-category="Mobile App">Mobile App</button>
+        <button type="button" class="btn-filter" data-category="Desktop App">Desktop App</button>
+        <button type="button" class="btn-filter" data-category="UI/UX Design">UI/UX Design</button>
+      </div>
+
+      <!-- Daftar Kartu Proyek -->
+      <div id="project-list"></div>
+    </div>
+  </body>
+</html>
