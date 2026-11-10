@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pengguna | Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Daftar Pengguna</h1>
+        <p class="subtitle">Praktikum Asynchronous JavaScript &amp; Fetch API</p>
+
+        <div class="actions-bar">
+            <button class="btn-primary" id="btnFetch" type="button">
+                Muat Data Pengguna
+            </button>
+        </div>
+
+        <p class="status-msg" id="statusMessage" role="status" aria-live="polite">
+            Klik tombol di atas untuk memuat data pengguna.
+        </p>
+
+        <section class="user-grid" id="userList" aria-label="Daftar pengguna"></section>
+    </main>
+</body>
+</html>
